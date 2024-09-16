@@ -1,0 +1,1 @@
+MY_SENSITIVE_KEYS = ["email", "phone"]
