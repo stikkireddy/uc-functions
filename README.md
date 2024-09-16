@@ -16,6 +16,9 @@ pip install uc-functions
 Convert decorated python functions to sql functions that can be deployed to Databricks. This is useful for managing
 large number of functions with reusable code. Easy way to test and debug functions.
 
+In this following example code, this project will convert the python function to a SQL function. It also scans for all
+unidentified names, functions, etc. and tries to inline them as much as possible in the SQL functions.
+
 ```python
 import json
 from pathlib import Path
@@ -78,6 +81,7 @@ $$;
 * Handle imports
 * Debug unidentified names
 * Easy unit testing and integration testing
+* Dynamic sys.path using python files in volumes (soon TBD) 
 
 ## Unit testing
 
