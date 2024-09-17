@@ -3,7 +3,7 @@
 ![GitHub License](https://img.shields.io/github/license/stikkireddy/uc-functions)
 ![Build](https://github.com/stikkireddy/uc-functions/actions/workflows/build.yaml/badge.svg)
 [![codecov](https://codecov.io/github/stikkireddy/uc-functions/branch/main/graph/badge.svg?token=EORUY66PNQ)](https://codecov.io/github/stikkireddy/uc-functions)
-![GitHub Tag](https://img.shields.io/github/v/tag/stikkireddy/uc-functions)
+![GitHub Tag](https://img.shields.io/github/v/tag/stikkireddy/uc-functions?sort=semver&label=Latest%20Version)
 
 **Note: This project is in early development and may not cover all your edge cases.**
 
