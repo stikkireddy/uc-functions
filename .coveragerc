@@ -1,0 +1,14 @@
+[run]
+omit =
+    *tests*
+    'tests/*',
+    '*/tests/*',
+    # omit anything in a .venv directory anywhere
+    '.venv/*',
+    "*/site-packages/*"
+
+[html]
+skip_empty = true
+
+[report]
+skip_empty = true
