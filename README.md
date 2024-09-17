@@ -1,5 +1,6 @@
 # uc-functions
 
+![GitHub License](https://img.shields.io/github/license/stikkireddy/uc-functions)
 ![Build](https://github.com/stikkireddy/uc-functions/actions/workflows/build.yaml/badge.svg)
 [![codecov](https://codecov.io/github/stikkireddy/uc-functions/branch/main/graph/badge.svg?token=EORUY66PNQ)](https://codecov.io/github/stikkireddy/uc-functions)
 
