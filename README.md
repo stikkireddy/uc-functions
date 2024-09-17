@@ -5,6 +5,16 @@ able to easily unit test, integration test and deploy them to Databricks. As par
 converts python AST to unity catalog functions. It also handles things like secrets, etc. by adding a layer of
 indirection using SQL based UDFs.
 
+Other solutions may attempt to use packages like pickle or cloudpickle to serialize the functions. This is not recommended in 
+practice as it can lead to environment discrepancies. Cloudpickle works best if you are using the same python version and 
+same version of cloudpickle. This is hard to at the moment with serverless environments. This is also not readable and 
+you will see a giant base64 encoded string in your code. `uc-functions` goal is to properly transpile the python code to 
+sql code and handle the majority of the edge cases by inlining all references in the function.
+
+> Using cloudpickle for long-term object storage is not supported and strongly discouraged.
+> 
+> Reference: https://github.com/cloudpipe/cloudpickle
+
 ## Installation
 
 ```bash
