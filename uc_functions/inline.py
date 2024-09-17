@@ -70,11 +70,16 @@ def generate_ast_dict(directory):
     print(f"Generating AST dictionary for {directory}")
     name_dict = {}
 
+    # TODO: support gitignore refspec
+    key_segments_to_skip = [r"/site-packages/", r"/.venv/", r"/venv/", r"/virtualenv/"]
+
     for root, _, files in os.walk(directory):
         for filename in files:
+            if any([segment in root for segment in key_segments_to_skip]):
+                continue
             if filename.endswith(".py"):
                 file_path = os.path.join(root, filename)
-                print(file_path)
+                print("Indexing: ", file_path)
                 with open(file_path, "r", encoding="utf-8") as file:
                     source_code = file.read()
                     node = ast.parse(source_code, filename=file_path)
