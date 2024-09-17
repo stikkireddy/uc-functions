@@ -3,6 +3,7 @@
 ![GitHub License](https://img.shields.io/github/license/stikkireddy/uc-functions)
 ![Build](https://github.com/stikkireddy/uc-functions/actions/workflows/build.yaml/badge.svg)
 [![codecov](https://codecov.io/github/stikkireddy/uc-functions/branch/main/graph/badge.svg?token=EORUY66PNQ)](https://codecov.io/github/stikkireddy/uc-functions)
+![GitHub Tag](https://img.shields.io/github/v/tag/stikkireddy/uc-functions)
 
 The purpose of this project is to help you manage unity catalog python functions as traditional python code and be
 able to easily unit test, integration test and deploy them to Databricks. As part of a compilation step this package
