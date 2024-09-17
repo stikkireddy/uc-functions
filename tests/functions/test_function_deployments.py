@@ -43,7 +43,7 @@ $$;
 
 def test_register_no_op_behavior():
     uc = FunctionDeployment("foo", "bar", root_dir=samples_dir)
-    from tests.samples.redact import redact
+    from samples.redact import redact
 
     reg = uc.register(redact)
 
@@ -94,7 +94,7 @@ RETURN SELECT {CATALOG}.{SCHEMA}._redact_w_secret(maybe_json, secret("my-scope",
 
 def test_register_secret_behavior():
     uc = FunctionDeployment("foo", "bar", root_dir=samples_dir)
-    from tests.samples.redact_with_secret import redact_w_secret
+    from samples.redact_with_secret import redact_w_secret
 
     reg = uc.register(redact_w_secret)
 
@@ -118,7 +118,7 @@ def test_remote():
         "bar",
         root_dir=samples_dir,
     )
-    from tests.samples.redact import redact
+    from samples.redact import redact
 
     reg = uc.register(redact)
     data = '{"foo": "bar"}'
@@ -137,7 +137,7 @@ def test_remote():
 
 def test_deploy():
     uc = FunctionDeployment("foo", "bar", root_dir=samples_dir)
-    from tests.samples.redact import redact
+    from samples.redact import redact
 
     uc.register(redact)
 

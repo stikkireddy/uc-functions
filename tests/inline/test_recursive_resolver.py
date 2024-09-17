@@ -33,7 +33,7 @@ except json.JSONDecodeError:
 
 
 def test_inline():
-    from tests.samples.redact import redact
+    from samples.redact import redact
 
     inline_function(redact, samples_dir)
     assert redact._inlined == True, "Function was not inlined"
@@ -43,7 +43,7 @@ def test_inline():
 
 
 def test_undefined_names():
-    from tests.samples.redact_with_undefined_name import redact_undefined
+    from samples.redact_with_undefined_name import redact_undefined
 
     with pytest.raises(ValueError) as e:
         inline_function(redact_undefined, samples_dir)
