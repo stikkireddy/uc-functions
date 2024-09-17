@@ -216,7 +216,13 @@ class FunctionDeployment:
             provided_ws_client: Optional[WorkspaceClient] = kwargs.pop(
                 "workspace_client", None
             )
-            provided_warehouse_id: Optional[str] = kwargs.pop("warehouse_id", None)
+            if provided_ws_client is None:
+                # this cant be above because WorkspaceClient construction validates auth and will fail tests
+                provided_ws_client = WorkspaceClient()
+            provided_warehouse_id: Optional[str] = kwargs.pop(
+                "warehouse_id",
+                self._get_first_warehouse_id(ws_client=provided_ws_client),
+            )
             if kwargs:
                 raise ValueError("Keyword arguments are not supported in remote calls")
             assert (
