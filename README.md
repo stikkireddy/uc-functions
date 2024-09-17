@@ -5,6 +5,9 @@
 [![codecov](https://codecov.io/github/stikkireddy/uc-functions/branch/main/graph/badge.svg?token=EORUY66PNQ)](https://codecov.io/github/stikkireddy/uc-functions)
 ![GitHub Tag](https://img.shields.io/github/v/tag/stikkireddy/uc-functions)
 
+**Note: This project is in early development and may not cover all your edge cases.**
+
+
 The purpose of this project is to help you manage unity catalog python functions as traditional python code and be
 able to easily unit test, integration test and deploy them to Databricks. As part of a compilation step this package
 converts python AST to unity catalog functions. It also handles things like secrets, etc. by adding a layer of
